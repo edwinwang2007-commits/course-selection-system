@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: course-selection-system
-    runtime: docker
-    rootDir: .
