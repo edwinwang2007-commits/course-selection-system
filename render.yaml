@@ -1,16 +1,5 @@
 services:
   - type: web
     name: course-selection-system
-    runtime: python
+    runtime: docker
     rootDir: .
-    buildCommand: |
-      cd frontend
-      npm install
-      npm run build
-      cd ..
-      cd backend
-      pip install -r requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.11.11
